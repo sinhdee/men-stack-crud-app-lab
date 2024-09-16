@@ -1,0 +1,25 @@
+<!-- views/fruits/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Book</title>
+  </head>
+  <body>
+    <h1>Create a New Book!</h1>
+    <form action="/books" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+  
+      <label for="isBookGood?">Was it a good read?</label>
+      <input type="checkbox" name="isBookGood?" id="isBookGood" />
+  
+      <button type="submit">Add Book</button>
+    </form>
+  </body>
+  
+</html>
+
+
