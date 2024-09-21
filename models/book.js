@@ -1,10 +1,15 @@
 const mongoose = require('mongoose');
 
+//SCHEMA
 const bookSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  author: { type: String, required: true },
-  description: String,
-  publishedDate: Date
-});
+    // structure the keys / properties in our document
+    title: String, 
+    isBookGood: Boolean,
+    author:String
+}) 
 
-module.exports = mongoose.model('Book', bookSchema);
+//Register the Model 
+const book = mongoose.model('Book', bookSchema);
+
+//Export the model 
+module.exports = book;

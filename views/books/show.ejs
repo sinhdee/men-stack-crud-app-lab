@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Show Page</title>
+  </head>
+  <body>
+    <h1>Books Show Page</h1>
+    <h2>Name: <%=book.name %></h2>
+
+    <% if (book.isBookGood) { %>
+    <p>This book is a good book!</p>
+    <% } else { %>
+    <p>This book was not good!</p>
+    <% } %>
+
+    <form method="POST" action="/books/<%= book._id%>?_method=DELETE">
+        <button type="submit">Delete Book</button>
+      </form>
+
+      <section>
+        <a href="/books/<%= book._id%>/edit">Edit Book</a>
+      </section>
+    </body>
+</html>
