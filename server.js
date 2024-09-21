@@ -60,7 +60,7 @@ app.get("/books/:id", async (req, res) => {
 app.get("/books", async (req, res) => {
   try {
     const allBooks = await book.find();
-    res.render("books/index", { books: allBooks, message: "Hello Friend" });
+    res.render("books/index", { books: allBooks, message: "All Books" });
   } catch (err) {
     console.log(err);
     res.redirect("/");
